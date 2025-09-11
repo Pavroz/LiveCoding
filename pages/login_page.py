@@ -2,14 +2,14 @@ import allure
 from base.base_page import BasePage
 from config.links import Links
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.common.by import By
 
 class LoginPage(BasePage):
     links = Links()
     PAGE_URL = links.LOGIN_PAGE
-    USERNAME_FIELD = ('css', 'input[name="username"]')
-    PASSWORD_FIELD = ('css', 'input[name="password"]')
-    SUBMIT_BUTTON = ('css', 'button[type="submit"]')
+    USERNAME_FIELD = (By.CSS_SELECTOR, 'input[name="username"]')
+    PASSWORD_FIELD = (By.CSS_SELECTOR, 'input[name="password"]')
+    SUBMIT_BUTTON = (By.CSS_SELECTOR, 'button[type="submit"]')
 
     @allure.step('Enter login')
     def enter_login(self, login):

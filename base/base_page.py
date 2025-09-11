@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage:
-    # links = Links()
-    # PAGE_URL = links.HOST
+    links = Links()
+    PAGE_URL = links.HOST
     def __init__(self, driver):
         """Принимает готовый драйвер от фикстуры, сохраняет в self.driver
         для использования в методах страницы (поиск элементов, ожидания)."""
